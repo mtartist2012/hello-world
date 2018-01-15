@@ -1,123 +1,70 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
-body {
-  font-family: "Merriweather", serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #252525;
-  line-height: 1.6;
-  display: grid;
-  grid-template: 
-	  "header header header header" 10em 
-	  "hero hero hero hero" 50vh 
-	  ". main sidebar ." auto 
-	  "footer footer footer footer" 10em
-	  /1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
-  grid-column-gap: 1.5em;
-}
+<!DOCTYPE html>
+<html lang="en" >
 
-header {
-  grid-area: header;
-}
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Area demo</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-header,
-footer {
-  background: #252525;
-  color: #e9d20f;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  
+      <link rel="stylesheet" href="css/style.css">
 
-.header-title,
-.footer-title {
-  font-family: "Six Caps", sans-serif;
-  font-size: 2.875rem;
-  color: #e9d20f;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-}
+  
+</head>
 
-.hero {
-  grid-area: hero;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+<body>
 
-.hero-title {
-  font-family: "Six Caps", sans-serif;
-  font-size: 6rem;
-  color: #252525;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  margin: 0;
-}
+  <header>
+  <h1 class="header-title">CSS Grid - grid-template-areas</h1>
+</header>
 
-.hero-subtitle {
-  font-family: "Merriweather", serif;
-  font-size: 2.875rem;
-  font-weight: 300;
-  color: #fff;
-  margin: 0;
-}
+<div class="hero">
+  <h1 class="hero-title">Grid areas</h1>
+  <p class="hero-subtitle">Making life easier</p>
+</div>
 
-main {
-  grid-area: main;
-}
+<main>
+  <h1>From the blog</h1>
+  <div class="card">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" alt="" class="card-img">
+    <h2 class="card-title">Blog post title</h2>
+    <div class="card-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+      <a href="">Read more</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" alt="" class="card-img">
+    <h2 class="card-title">Blog post title</h2>
+    <div class="card-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+      <a href="">Read more</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" alt="" class="card-img">
+    <h2 class="card-title">Blog post title</h2>
+    <div class="card-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+      <a href="">Read more</a>
+    </div>
+  </div>
 
-aside {
-  grid-area: sidebar;
-  background: #e8e8e8;
-  padding: 2em;
-}
 
-footer {
-  grid-area: footer;
-}
+</main>
 
-.card {
-  display: grid;
-  grid-template: "img title" -webkit-min-content "img content" auto / 1fr 3fr;
-  grid-template: "img title" min-content "img content" auto / 1fr 3fr;
-  grid-column-gap: 1.5em;
-  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-}
+<aside>
+  <h1>Sidebar stuff</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat. In tempor pharetra felis at fermentum. Maecenas iaculis neque orci, sit amet sodales quam venenatis sit amet. Praesent eu enim nec velit bibendum accumsan a sed tellus. Aenean sed justo a tortor hendrerit imperdiet efficitur nec risus. Morbi gravida mi quis ultrices elementum. Pellentesque fermentum sodales sagittis. Sed vel efficitur nisl. Ut congue sodales sapien. Duis ultricies felis nunc, eu semper est tincidunt eu. Curabitur faucibus luctus eros, eget semper mauris dictum vel.</p>
+</aside>
 
-.card-img {
-  grid-area: img;
-  max-width: 100%;
-}
+<footer>
+  <h1 class="footer-title">the end</h1>
+</footer>
+  
+  
 
-.card-title {
-  grid-area: title;
-  margin: 0;
-  font-weight: 300;
-}
+</body>
 
-.card-content {
-  grid-area: content;
-}
-.card-content a {
-  color: #e9d20f;
-  font-size: 1.1em;
-}
+</html>
